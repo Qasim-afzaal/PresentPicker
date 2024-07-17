@@ -1,28 +1,20 @@
 
 import 'package:flutter/material.dart';
-// import 'package:fluttertoast/fluttertoast.dart';
-import 'package:the_gift_guide/base/app_view.dart';
-// import 'package:the_gift_guide/route_generator.dart';
 
-import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+import 'package:present_picker/provider/authProvider.dart';
+import 'package:present_picker/provider/scrapDataPreovider.dart';
+import 'package:present_picker/views/WebViewScreens/webScrapping_List.dart';
+import 'package:present_picker/views/WebViewScreens/webView_Screen.dart';
+import 'package:present_picker/views/auth/login_Screen.dart';
+import 'package:present_picker/views/auth/onBoardScreen.dart';
+import 'package:present_picker/views/auth/signUp_Screen.dart';
+import 'package:present_picker/views/auth/widgets/pass_Screen.dart';
+import 'package:present_picker/views/home/home_view.dart';
+import 'package:present_picker/views/menuScreen/menu.dart';
+import 'package:present_picker/views/splash/splash_view.dart';
+import 'package:present_picker/views/wishlist/oops_login_req.dart';
 import 'package:provider/provider.dart';
-import 'package:the_gift_guide/provider/authProvider.dart';
 
-import 'package:the_gift_guide/provider/scrapDataPreovider.dart';
-import 'package:the_gift_guide/views/WebViewScreens/webScrapping_List.dart';
-
-import 'package:the_gift_guide/views/WebViewScreens/webView_Screen.dart';
-import 'package:the_gift_guide/views/auth/login_Screen.dart';
-import 'package:the_gift_guide/views/auth/onBoardScreen.dart';
-import 'package:the_gift_guide/views/auth/signUp_Screen.dart';
-import 'package:the_gift_guide/views/auth/widgets/pass_Screen.dart';
-import 'package:the_gift_guide/views/data_entry_view/scrap_data_view.dart';
-import 'package:the_gift_guide/views/home/home_view.dart';
-import 'package:the_gift_guide/views/menuScreen/menu.dart';
-import 'package:the_gift_guide/views/splash/splash_view.dart';
-import 'package:the_gift_guide/views/wishlist/oops_login_req.dart';
 
 class ScreenHandleWithProvider extends StatefulWidget {
   const ScreenHandleWithProvider({super.key});
@@ -80,10 +72,6 @@ late AuthProvider authProvider; // Declare the AuthProvider variable
       child: Consumer<AuthProvider>(
         builder: (context, auth, child) {
           print(" Screen STATUS ${auth.loggedInStatus}");
-          // return SplashView();
-          //  auth.handleAppLifecycleState(
-          //   WidgetsBinding.instance!.lifecycleState,
-          // );
 
           if (auth.loggedInStatus == States.Authenticating) {
             return SplashView();
