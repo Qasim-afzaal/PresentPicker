@@ -171,7 +171,7 @@ class _EmailViewState extends State<EmailView> {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       SizedBox(height: screenHeight * 0.08),
-                      const H2(text: 'Welcome To The Gift Guide'),
+                      const H2(text: 'Welcome To Present Picker'),
                       SizedBox(height: screenHeight * 0.03),
                       const Padding(
                         padding: EdgeInsets.only(bottom: 18.0),
@@ -233,7 +233,7 @@ class _EmailViewState extends State<EmailView> {
                                         }
                                       } else {
                                         setState(() => isLoading = false);
-                                        AppService.launchURLService("https://www.thegiftguide.com/create-account?username=${emailController.text}");
+                                        AppService.launchURLService("https://www.presentPicker.com/create-account?username=${emailController.text}");
                                       }
                                     } catch (e) {
                                       setState(() => isLoading = false);
@@ -252,7 +252,7 @@ class _EmailViewState extends State<EmailView> {
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
                                 try {
-                                  AppService.launchURLService("https://www.thegiftguide.com/terms");
+                                  AppService.launchURLService("https://www.presentPicker.com/terms");
                                 } catch (e) {
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(content: Text(e.toString())),
