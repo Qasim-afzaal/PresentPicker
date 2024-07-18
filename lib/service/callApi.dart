@@ -6,7 +6,7 @@ import 'package:http/http.dart' as http;
 import '../utils/Utils.dart';
 
 Future<dynamic> callAPI(datarequest, myurl, authToken) async {
-  final url ="https://test.thegiftguide.com/api/user/login";
+  final url ="https://test.presentPicker.com/api/user/login";
   // Utils.loginURL;
   print("The my url: $myurl"); 
   print("this is api call $datarequest $url  $authToken");
@@ -38,7 +38,7 @@ Future<dynamic> callAPI(datarequest, myurl, authToken) async {
 
 Future<dynamic> callAPI2(datarequest, myurl, authToken) async {
   final url = Utils.scrappingURL;
-  // "https://test.thegiftguide.com/api/scrape";
+  // "https://test.presentPicker.com/api/scrape";
   print("The my url: $myurl"); 
   print("this is api call $datarequest $url  $authToken");
   try {
