@@ -84,7 +84,7 @@ class AuthProvider with ChangeNotifier {
     try {
       _emailResult = Statess.Loading;
       notifyListeners();
-      var url = "https://test.thegiftguide.com/api/user/login";
+      var url = "https://test.presentPicker.com/api/user/login";
       // Utils.loginURL;
       var body = {'email': _email, 'password': password};
 
@@ -179,7 +179,7 @@ class AuthProvider with ChangeNotifier {
         print("error $_loginErrorMsg");
 
         AppService.launchURLService(
-            "https://www.thegiftguide.com/create-account/nsgauper@gmail.com");
+            "https://www.presentPicker.com/create-account/nsgauper@gmail.com");
 
         notifyListeners();
         print("falssssssse");
