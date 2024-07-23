@@ -19,13 +19,6 @@ class _CustomTextFieldState extends State<CustomTextField> {
   final String error = '';
   Size? size;
 
-  // RegExp emailRegex = new RegExp(
-  //     r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&'*+-/=?^_`{|}~]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
-  // RegExp userNameRegex = new RegExp(r"^[a-zA-Z0-9_]+$");
-  // RegExp allowNumber = new RegExp(r"^[0-9]*$");
-  // String email = '';
-
-  // String password = '';
 
   get myController => widget.controller;
   @override
@@ -38,34 +31,33 @@ class _CustomTextFieldState extends State<CustomTextField> {
       children: [
         Container(
           padding: widget.padding,
-          // width: 260,
-          //  height: 38,
+
           child: TextFormField(
           
               controller: myController,
               
-              style: TextStyle(color: Colors.black),
+              style: const TextStyle(color: Colors.black),
               decoration: InputDecoration(
                   filled: true,
                   isDense: true,
                   fillColor: Colors.white,
                   // hoverColor: greycolor,
                   hintText: this.widget.text,
-                  hintStyle: TextStyle(
+                  hintStyle: const TextStyle(
                       fontSize: 14.0,
                       // color: tileGreenColor,
                       // fontFamily: secondaryFontFamily
                       ),
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(0),
-                      borderSide: BorderSide(color: Colors.grey)),
+                      borderSide: const BorderSide(color: Colors.grey)),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(0.0),
-                    borderSide: BorderSide(
+                    borderSide: const BorderSide(
                       color: Colors.grey,
                     ),
                   ),
-                  focusedBorder: OutlineInputBorder(
+                  focusedBorder: const OutlineInputBorder(
                       borderRadius: BorderRadius.all(Radius.circular(0)),
                       borderSide: BorderSide(color: Colors.black))),
               validator: (value) {
